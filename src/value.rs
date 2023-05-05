@@ -181,7 +181,7 @@ impl Data {
         }
     }
 
-    fn to_bytes(&self) -> Vec<u8> {
+    pub fn to_bytes(&self) -> Vec<u8> {
         match self {
             Data::None => vec![],
             Data::String(s) => string_to_utf16_byte_vec(s),
